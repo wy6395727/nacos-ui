@@ -89,12 +89,12 @@ class Login extends React.Component {
           }}
         >
           <div className="vertical-middle product-area">
-            <img className="product-logo" src="img/nacos.png" />
+            {/* <img className="product-logo" src="img/nacos.png" /> */}
             <p className="product-desc">
               {/* an easy-to-use dynamic service discovery, configuration and service management
               platform for building cloud native applications */}
               易于使用的动态服务发现、配置和服务管理
-构建云原生应用程序的平台
+构建云原生应用程序的平台 -- DICT
             </p>
           </div>
           <div className="animation animation1" />
