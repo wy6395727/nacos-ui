@@ -15,7 +15,7 @@
  */
 
 import React from 'react';
-import { Card, Form, Input, Message, ConfigProvider, Field } from '@alifd/next';
+import { Card, Form, Input, Message, ConfigProvider, Field, Icon } from '@alifd/next';
 import { withRouter } from 'react-router-dom';
 
 import './index.scss';
@@ -80,69 +80,70 @@ class Login extends React.Component {
 
     return (
       <div className="home-page">
-        <Header />
         <section
           className="top-section"
           style={{
-            background: 'url(img/black_dot.png) repeat',
-            backgroundSize: '14px 14px',
+            backgroundImage: 'url(img/black_dot.png)',
           }}
         >
-          <div className="vertical-middle product-area">
-            {/* <img className="product-logo" src="img/nacos.png" /> */}
-            <p className="product-desc">
-              {/* an easy-to-use dynamic service discovery, configuration and service management
-              platform for building cloud native applications */}
-              易于使用的动态服务发现、配置和服务管理
-构建云原生应用程序的平台 -- DICT
-            </p>
-          </div>
-          <div className="animation animation1" />
-          <div className="animation animation2" />
-          <div className="animation animation3" />
-          <div className="animation animation4" />
-          <div className="animation animation5" />
-          <Card className="login-panel" contentHeight="auto">
-            <div className="login-header">{locale.login}</div>
-            <div className="internal-sys-tip">
-              <div>{locale.internalSysTip1}</div>
-              <div>{locale.internalSysTip2}</div>
+          <div className="login-panel">
+            <div className="panel1">
+            <img
+              src="img/login1.png"
+              className="logo"
+            />
             </div>
-            <Form className="login-form" field={this.field}>
-              <FormItem>
-                <Input
-                  {...this.field.init('username', {
-                    rules: [
-                      {
-                        required: true,
-                        message: locale.usernameRequired,
-                      },
-                    ],
-                  })}
-                  placeholder={locale.pleaseInputUsername}
-                  onKeyDown={this.onKeyDown}
-                />
-              </FormItem>
-              <FormItem>
-                <Input
-                  htmlType="password"
-                  placeholder={locale.pleaseInputPassword}
-                  {...this.field.init('password', {
-                    rules: [
-                      {
-                        required: true,
-                        message: locale.passwordRequired,
-                      },
-                    ],
-                  })}
-                  onKeyDown={this.onKeyDown}
-                />
-              </FormItem>
-              <FormItem label=" ">
-                <Form.Submit onClick={this.handleSubmit}>{locale.submit}</Form.Submit>
-              </FormItem>
-            </Form>
-          </Card>
+            <Card className="panel2" contentHeight="auto">
+              <div className="login-header">注册配置中心</div>
+              <div className="internal-sys-tip">
+                易于使用的动态服务发现，配置和服务管理 构建云原生应用程序的平台
+              </div>
+              <Form className="login-form" field={this.field}>
+                <FormItem>
+                  <Input
+                    innerBefore={<Icon
+                      type={'account'}
+                      size={'xxl'}
+                      style={{ color: '#aaaaaa', marginLeft: 5, verticalAlign: 'middle' }}
+                    />}
+                    {...this.field.init('username', {
+                      rules: [
+                        {
+                          required: true,
+                          message: locale.usernameRequired,
+                        },
+                      ],
+                    })}
+                    placeholder={locale.pleaseInputUsername}
+                    onKeyDown={this.onKeyDown}
+                  />
+                </FormItem>
+                <FormItem>
+                  <Input
+                    innerBefore={<Icon
+                      type="clock"
+                      style={{ color: '#aaaaaa', marginLeft: 5, verticalAlign: 'middle' }}
+                    />}
+                    htmlType="password"
+                    placeholder={locale.pleaseInputPassword}
+                    {...this.field.init('password', {
+                      rules: [
+                        {
+                          required: true,
+                          message: locale.passwordRequired,
+                        },
+                      ],
+                    })}
+                    onKeyDown={this.onKeyDown}
+                  />
+                </FormItem>
+                <FormItem label=" ">
+                  <Form.Submit onClick={this.handleSubmit}>登 录</Form.Submit>
+                </FormItem>
+              </Form>
+            </Card>
+          </div>
+
         </section>
       </div>
     );

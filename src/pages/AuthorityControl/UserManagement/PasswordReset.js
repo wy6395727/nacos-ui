@@ -16,7 +16,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Field, Form, Input, Dialog, ConfigProvider } from '@alifd/next';
+import { Field, Form, Input, Dialog, ConfigProvider, Icon } from '@alifd/next';
 import './UserManagement.scss';
 
 const FormItem = Form.Item;

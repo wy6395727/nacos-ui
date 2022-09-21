@@ -703,7 +703,12 @@ form.vertical-margin-lg .form-group {
 }
 
 .xrange-panel .quick-list > span.active {
-  background-color: #f2f3f7;
+  // background-color: #f2f3f7;
+  background: linear-gradient(
+        108deg,
+        rgba(36, 74, 140, 1) 0%,
+        rgba(34, 33, 67, 1) 100%
+      );
   color: #333;
   cursor: default;
 }
@@ -998,7 +1003,6 @@ form.vertical-margin-lg .form-group {
 .dash-menu-pic {
   position: absolute;
   width: 32px;
-
   left: 20px;
 }
 

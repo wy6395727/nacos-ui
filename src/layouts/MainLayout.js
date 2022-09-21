@@ -89,14 +89,10 @@ class MainLayout extends React.Component {
           <div className="left-panel">
             {this.isShowGoBack() ? (
               <div className="go-back" onClick={() => this.goBack()}>
-                <Icon type="arrow-left" />
+                <Icon type="arrow-left" /> 返回
               </div>
             ) : (
               <>
-                <h1 className="nav-title">
-                  {locale.nacosName}
-                  {/* <span>{version}</span> */}
-                </h1>
                 <Menu
                   defaultOpenKeys={this.defaultOpenKeys()}
                   className="nav-menu"
