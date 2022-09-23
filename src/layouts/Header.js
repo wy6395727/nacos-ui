@@ -100,12 +100,17 @@ class Header extends React.Component {
           <div className="header-body">
             <a href="#" onClick={this.indexAction} rel="noopener noreferrer">
               <span className="nav-title">
-                  注册中心
+                  注册配置中心
               </span>
             </a>
             {/* if is login page, we will show logout */}
             {pathname !== '/login' && (
-              <Dropdown trigger={<div className="logout">{this.getUsername()}</div>}>
+              <Dropdown trigger={
+              <div className="logout">
+                <span>{this.getUsername()} <Icon type={'arrow-down'} size={'medium'} /></span>
+              </div>
+              }
+              >
                 <Menu>
                   <Menu.Item onClick={this.logout}>{locale.logout}</Menu.Item>
                   <Menu.Item onClick={this.changePassword}>{locale.changePassword}</Menu.Item>

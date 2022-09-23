@@ -191,7 +191,6 @@ class NameSpaceList extends React.Component {
       marginTop: 5,
       marginBottom: '10px',
       paddingBottom: '10px',
-      borderBottom: '1px solid #ccc',
     };
 
     return (
@@ -207,7 +206,7 @@ class NameSpaceList extends React.Component {
               lineHeight: '30px',
               paddingTop: 0,
               paddingBottom: 0,
-              borderLeft: '2px solid #09c',
+              borderLeft: '2px solid #3B87F7',
               float: 'left',
               margin: 0,
               paddingLeft: 10,

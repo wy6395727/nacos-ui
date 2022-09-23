@@ -1091,7 +1091,7 @@ class ConfigurationManagement extends React.Component {
                   padding: 0,
                   margin: 0,
                   paddingLeft: 10,
-                  borderLeft: '3px solid #09c',
+                  borderLeft: '3px solid #3B87F7',
                   color: '#ccc',
                   fontSize: '12px',
                 }}

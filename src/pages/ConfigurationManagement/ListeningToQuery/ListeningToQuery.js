@@ -276,7 +276,7 @@ class ListeningToQuery extends React.Component {
                 height: 28,
                 lineHeight: '28px',
                 paddingLeft: 10,
-                borderLeft: '3px solid #09c',
+                borderLeft: '3px solid #3B87F7',
                 margin: 0,
                 marginBottom: 10,
                 fontSize: 16,

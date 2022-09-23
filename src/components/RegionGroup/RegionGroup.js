@@ -53,7 +53,7 @@ class RegionGroup extends React.Component {
         display: 'inline-block',
         textIndent: '8px',
         marginRight: '8px',
-        borderLeft: '2px solid #88b7E0',
+        borderLeft: '2px solid #3B87F7',
         fontSize: '16px',
       },
     };
